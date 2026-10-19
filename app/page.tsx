@@ -16,9 +16,9 @@ export default async function HomePage() {
     <SiteShell>
       <section className="container hero" aria-labelledby="hero-title">
         <div className="hero__intro">
-          <h1 id="hero-title">I build the systems <span>behind useful software.</span></h1>
+          <h1 id="hero-title">I build the systems behind <span>useful software.</span></h1>
           <div className="hero__side">
-            <p>{profile.introduction} My focus is backend development, Next.js, and AWS.</p>
+            <p className="hero__role">{profile.role}</p>
             <div className="hero__actions">
               <Link className="button" href="/work">Explore projects <ArrowRight size={17} aria-hidden="true" /></Link>
               <Link className="text-link" href="/#contact">Get in touch <ArrowUpRight size={17} aria-hidden="true" /></Link>

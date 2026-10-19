@@ -11,6 +11,7 @@ colors:
   route-teal: "#116c69"
   route-teal-deep: "#0b5553"
   route-teal-pressed: "#083d3b"
+  warm-signal: "#9b432d"
   light-route-focus: "#d5f0e8"
   sea-glass-wash: "#dcebe6"
   project-blue-ink: "#416782"
@@ -24,7 +25,7 @@ colors:
 typography:
   display:
     fontFamily: "Inter, Arial, sans-serif"
-    fontSize: "clamp(44px, 6.7vw, 92px)"
+    fontSize: "clamp(44px, 6vw, 84px)"
     fontWeight: 760
     lineHeight: 1.035
     letterSpacing: "-0.04em"
@@ -65,7 +66,7 @@ spacing:
   md: "20px"
   lg: "28px"
   xl: "40px"
-  section: "clamp(74px, 9vw, 130px)"
+  section: "clamp(66px, 7vw, 110px)"
 components:
   button-primary:
     backgroundColor: "{colors.deep-teal-ink}"
@@ -119,23 +120,24 @@ components:
 
 The portfolio reads like a clear map of connected engineering work. A cool mineral ground, deep teal type, route lines, and annotated diagrams make interfaces, services, and cloud workflows legible without posing conceptual illustrations as product screenshots. The writing and layout are direct, spacious, and technical without becoming a dashboard.
 
-Inter carries the whole site. White panels and pale sea-glass fields organize evidence; a dark teal contact panel closes the route. The visual language is restrained enough for a hiring manager to scan, while the diagram grammar gives backend work a concrete form.
+Inter carries the whole site. White panels and pale sea-glass fields organize evidence; a warm signal marks the hero and the typed-services node, while a dark teal contact panel closes the route. The visual language is restrained enough for a hiring manager to scan, while the diagram grammar gives backend work a concrete form.
 
 **Key Characteristics:**
 
-- A light mineral canvas with deep teal ink and one primary route accent.
+- A light mineral canvas with deep teal ink, a teal action color, and one warm signal for editorial emphasis.
 - Large, tightly spaced Inter headings beside concise supporting copy.
 - Bordered, rounded diagram panels with labels and captions that explain their conceptual status.
 - Clear keyboard focus, touch-sized links, and mobile diagrams that retain their sequence.
 
 ## Colors
 
-The palette has a quiet mineral base and a route-teal accent. Project diagram variants add muted blue, clay, violet, or green only to distinguish each conceptual cover.
+The palette has a quiet mineral base, a route-teal action color, and a warm signal on the opening statement and central diagram node. Project diagram variants add muted blue, clay, violet, or green only to distinguish each conceptual cover.
 
 ### Primary
 
 - **Deep Teal Ink:** Main headings, body anchors, primary controls, emphasized diagram nodes, and the contact panel.
-- **Route Teal:** The hero emphasis, connectors, and visible focus outline.
+- **Route Teal:** Connectors, interactive links, and the visible focus outline.
+- **Warm Signal:** The hero's key phrase, typed-services node, and project category labels. White and pale warm text retain readable contrast on the node.
 - **Deep Route Teal:** Hover surfaces, text links, and explanatory diagram strokes. A darker pressed shade marks active controls.
 - **Light Route Focus:** A pale sea-glass outline identifies keyboard focus inside the dark contact panel; the same shade supports the emphasized diagram node's small text.
 
@@ -164,7 +166,7 @@ The palette has a quiet mineral base and a route-teal accent. Project diagram va
 ### Hierarchy
 
 - **Display:** Bold and tightly tracked, used for the home hero. At small phone widths it resolves to a fixed (42px) size.
-- **Headline:** Section titles, balanced to short line lengths and paired with one small explanatory paragraph.
+- **Headline:** Section titles, balanced to short line lengths. Supporting copy appears only when it adds context.
 - **Title:** Project names on editorial rows; shorter titles remain prominent without forcing long descriptions into the same scale.
 - **Body:** Paragraphs generally use (16px) text with generous leading; key project summaries use (17px), while metadata uses smaller text.
 - **Label:** Small uppercase annotations with visible letter spacing, used inside conceptual diagrams and related cards.
@@ -173,7 +175,7 @@ The palette has a quiet mineral base and a route-teal accent. Project diagram va
 
 ## Layout
 
-The content container is capped at (1240px). It keeps (20px) side gutters on larger screens and (16px) gutters below (700px). Sections use large, clamped vertical spacing, and quiet border lines separate the major chapters. The hero pairs a broad statement with a narrower positioning column, followed by a full-width three-stage diagram.
+The content container is capped at (1240px). It keeps (20px) side gutters on larger screens and (16px) gutters below (700px). Sections use clamped vertical spacing, and quiet border lines separate the major chapters. The hero pairs a broad statement with a narrower role and action column, followed by a full-width three-stage diagram. Its top padding and diagram gap keep the opening compact enough to reach project evidence sooner.
 
 At (900px) the hero becomes one column. At (850px) the desktop navigation gives way to a native `details` menu. At (700px), project rows, experience entries, skills groups, contact content, case-study bodies, related-work cards, and resume columns become single-column. The system diagram and project flows turn vertical; connectors change orientation so the reading order is retained. At (390px) and below, the hero title uses (42px), and the masthead name may wrap. The minimum supported body width is (320px).
 
@@ -199,7 +201,7 @@ The recurring silhouette is a crisp rounded rectangle: controls use gentle corne
 
 ### Navigation
 
-The masthead mark is a deep teal square beside Joshua's name. Desktop links have (44px) targets and a quiet bottom rule; hover and `[aria-current="page"]` use route teal and reveal the rule. The header marks the brand current on home and marks the Projects and Resume links current on their exact routes. Below (850px), a keyboard-operable native `details` menu reveals a white, bordered panel with (46px) rows. Its current route uses `aria-current` plus a pale sea-glass fill and deep route-teal text. Contact is a filled desktop control. The menu and all links inherit the visible focus outline.
+The masthead mark is a deep teal square beside Joshua's name. The primary links—Projects, Experience, and Skills—lead to homepage sections; Contact is a filled desktop control and also leads to its homepage section. Desktop links have (44px) targets and a quiet bottom rule; hover uses route teal and reveals the rule. Below (850px), a keyboard-operable native `details` menu reveals a white, bordered panel with (46px) rows. The menu and all links inherit the visible focus outline. The full resume is linked from the experience section and footer as a separate document view.
 
 ### Project Rows and Previews
 
@@ -216,6 +218,8 @@ The contact panel is the only large dark surface. A large white invitation and s
 ### Resume Sheet
 
 The on-site resume uses a white sheet on the mineral canvas, with compact typographic hierarchy and thin dividers. In print, the site chrome and shadow disappear, the sheet becomes full width, and sections avoid breaking internally.
+
+The homepage experience list shows each role's title, dates, organization, and one summary sentence. The resume preserves the fuller reviewed descriptions and bullet points.
 
 ### Motion and Focus
 

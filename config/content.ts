@@ -6,8 +6,6 @@ export const profile = {
   email: "joshuamagdada@gmail.com",
   github: "https://github.com/Josh-M2",
   linkedin: "https://www.linkedin.com/in/joshua-magdadaro-904366338/",
-  introduction:
-    "I build TypeScript applications from the interface through the services and cloud workflows behind them.",
   profile:
     "Full-stack TypeScript developer with production experience across fintech, SaaS, and CMS platforms. My work spans Next.js interfaces, Node.js services, secure integrations, and AWS workflows.",
 } as const;
