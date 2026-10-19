@@ -33,7 +33,7 @@ export default async function HomePage() {
         <div className="container">
           <div className="section-heading">
             <h2 id="work-title">Featured projects.</h2>
-            <p>Personal projects that show how I connect product interfaces, data, and platform behavior.</p>
+            <p>Selected personal work. Open a case study to see the decisions behind each build.</p>
           </div>
           <div className="project-list">
             {selected.map((project, index) => (
@@ -50,7 +50,6 @@ export default async function HomePage() {
         <div className="container">
           <div className="section-heading">
             <h2 id="experience-title">Experience across the stack.</h2>
-            <p>Production work in fintech, SaaS, and CMS platforms, with a consistent focus on reliable implementation.</p>
           </div>
           <div className="experience-list">
             {experience.map((item) => (
@@ -60,7 +59,6 @@ export default async function HomePage() {
                   <h3>{item.title}</h3>
                   <p className="experience-item__company">{item.company} · {item.location}</p>
                   <p className="experience-item__summary">{item.summary}</p>
-                  <ul>{item.highlights.map((highlight) => <li key={highlight}>{highlight}</li>)}</ul>
                 </div>
               </article>
             ))}
@@ -79,7 +77,6 @@ export default async function HomePage() {
         <div className="container">
           <div className="section-heading">
             <h2 id="skills-title">Tools in context.</h2>
-            <p>A focused selection from the technologies I use across applications, services, infrastructure, and testing.</p>
           </div>
           <div className="skills-grid">
             {skillGroups.map((group) => (

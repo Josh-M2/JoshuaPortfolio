@@ -22,7 +22,7 @@ export function SystemDiagram() {
         </div>
       </div>
       <figcaption>
-        A conceptual view of the areas I work across, based on my CV. It is not a diagram of a specific client system.
+        Conceptual illustration of my work, not a client system.
       </figcaption>
     </figure>
   );

@@ -8,7 +8,7 @@ export function ProjectRow({ project, repository, headingLevel = "h3" }: { proje
   const Heading = headingLevel;
   const isMobileDemo = project.preview.type === "screenshot" && project.preview.viewport === "mobile";
   const repoStatus = repository.status === "available"
-    ? `GitHub updated ${new Intl.DateTimeFormat("en", { month: "short", year: "numeric", timeZone: "UTC" }).format(new Date(repository.details.updatedAt))}`
+    ? null
     : repository.status === "missing"
       ? "Source repository currently unavailable"
       : "Live repository details temporarily unavailable";
@@ -22,7 +22,7 @@ export function ProjectRow({ project, repository, headingLevel = "h3" }: { proje
         <span className="project-row__category">{project.category}</span>
         <p className="project-row__summary">{project.summary}</p>
         <p className="project-row__role">My contribution: {project.role}</p>
-        <p className="project-row__repo">{repoStatus}</p>
+        {repoStatus && <p className="project-row__repo">{repoStatus}</p>}
         <div className="project-row__links">
           <Link className="text-link" href={`/work/${project.slug}`} aria-label={`Read the ${project.title} case study`}>
             Read the case study <ArrowUpRight size={17} aria-hidden="true" />
