@@ -58,5 +58,5 @@ if (errors.length) {
   for (const error of errors) console.error(error);
   process.exitCode = 1;
 } else {
-  console.log(`${files.length} public demo previews checked.`);
+  console.log(`${files.length} project previews checked.`);
 }

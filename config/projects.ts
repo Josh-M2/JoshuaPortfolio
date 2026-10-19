@@ -13,12 +13,12 @@ export type Project = {
   accent: "teal" | "blue" | "clay" | "violet" | "green";
   preview:
     | { type: "diagram" }
-    | { type: "screenshot"; viewport?: "mobile"; layout?: "conversation"; src: `/project-previews/${string}.jpg`; alt: string; caption: string; capturedOn: string };
+    | { type: "screenshot"; viewport?: "mobile"; layout?: "conversation"; src: `/project-previews/${string}.jpg`; alt: string; caption: string; capturedOn: string; toolbarLabel?: string; toolbarDomain?: string };
   demoUrl?: string;
   demoNote?: string;
 };
 
-/** Editorial claims are CV-backed; GitHub metadata is joined separately by exact repo. */
+/** Editorial claims come from the CV and reviewed project sources; GitHub metadata is joined by exact repo. */
 export const projects: readonly Project[] = [
   {
     slug: "leadnest-crm",
@@ -40,12 +40,14 @@ export const projects: readonly Project[] = [
     accent: "teal",
     preview: {
       type: "screenshot",
-      src: "/project-previews/leadnest-crm.jpg",
-      alt: "LeadNest CRM public homepage with a pastel background, navigation, and a lead-management call to action.",
-      caption: "Public demo homepage",
-      capturedOn: "2026-10-17",
+      src: "/project-previews/leadnest-crm-live-dashboard.jpg",
+      alt: "Signed-in LeadNest CRM dashboard for the joshw organization showing sample pipeline metrics and recent activity.",
+      caption: "Live dashboard · joshw sample workspace",
+      capturedOn: "2026-10-19",
+      toolbarLabel: "Signed-in live dashboard",
     },
-    demoUrl: "https://crm-app-blush-three.vercel.app/",
+    demoUrl: "https://crm-app-blush-three.vercel.app/dashboard",
+    demoNote: "Preview shows sample data in the joshw organization. The live dashboard requires sign-in.",
   },
   {
     slug: "feel-daily-verse",
@@ -75,6 +77,35 @@ export const projects: readonly Project[] = [
     },
     demoUrl: "https://feelv1.vercel.app/#/tab_today/home",
     demoNote: "First visit opens guest setup before Today.",
+  },
+  {
+    slug: "jugandr",
+    repo: "Josh-M2/JuganDR",
+    title: "JuganDR",
+    category: "Civic services / Realtime",
+    summary: "A document request demo with live tracking for residents and a staff review dashboard.",
+    role: "Full-stack request, tracking, and staff workflows",
+    context:
+      "This portfolio demo connects resident document requests to staff review and status updates. Its records are fictional; it is not an official barangay service.",
+    contribution: [
+      "Built the request form and public tracking flow for seven document types with supporting-file uploads.",
+      "Developed the staff dashboard for reviewing requests, changing statuses, exporting CSV data, and preparing unsigned PDF drafts.",
+      "Connected Neon PostgreSQL, private Object Storage, and Neon Realtime so the tracker and dashboard receive live status updates.",
+    ],
+    stack: ["React", "TypeScript", "Express", "Neon PostgreSQL", "Neon Realtime", "Object Storage"],
+    diagram: ["Resident request", "Live status", "Staff review"],
+    diagramCaption: "Conceptual path from a resident request to live tracking and staff review.",
+    accent: "green",
+    preview: {
+      type: "screenshot",
+      src: "/project-previews/jugandr-staff-dashboard.jpg",
+      alt: "JuganDR staff dashboard showing twelve fictional document requests, status counts, filters, and a request list.",
+      caption: "Staff dashboard · fictional demo requests",
+      capturedOn: "2026-10-19",
+      toolbarLabel: "Signed-in demo dashboard",
+    },
+    demoUrl: "https://jugandr-web.vercel.app/admin",
+    demoNote: "The staff dashboard requires sign-in. This portfolio demo uses fictional records and is not an official barangay service.",
   },
   {
     slug: "real-time-chat",
@@ -123,7 +154,15 @@ export const projects: readonly Project[] = [
     diagram: ["Admin UI", "Auth & roles", "Row-level policies"],
     diagramCaption: "Conceptual path from the admin interface to policy-guarded data.",
     accent: "violet",
-    preview: { type: "diagram" },
+    preview: {
+      type: "screenshot",
+      src: "/project-previews/supabase-user-management.jpg",
+      alt: "Supabase User Management admin dashboard showing three team members, including two administrators and one staff member.",
+      caption: "Signed-in admin dashboard",
+      capturedOn: "2026-10-18",
+    },
+    demoUrl: "https://user-management-two-wine.vercel.app/admindashboard",
+    demoNote: "The admin dashboard requires sign-in.",
   },
   {
     slug: "virtual-services-agency",

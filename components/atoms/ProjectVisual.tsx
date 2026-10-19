@@ -17,8 +17,8 @@ export function ProjectVisual({ project }: { project: Project }) {
         {preview.viewport === "mobile"
           ? <Smartphone size={16} aria-hidden="true" />
           : <span className="project-preview__dots" aria-hidden="true"><i /><i /><i /></span>}
-        <span>{preview.viewport === "mobile" ? "Public mobile app" : "Public website"}</span>
-        <span className="project-preview__domain">{project.demoUrl ? new URL(project.demoUrl).hostname : project.title}</span>
+        <span>{preview.toolbarLabel ?? (preview.viewport === "mobile" ? "Public mobile app" : "Public website")}</span>
+        <span className="project-preview__domain">{preview.toolbarDomain ?? (project.demoUrl ? new URL(project.demoUrl).hostname : project.title)}</span>
       </div>
       {project.demoUrl ? (
         <a className="project-preview__image-link" href={project.demoUrl} target="_blank" rel="noopener noreferrer" aria-label={`Open the ${project.title} live demo`}>

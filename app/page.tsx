@@ -41,7 +41,7 @@ export default async function HomePage() {
             ))}
           </div>
           <div className="section-end-link">
-            <Link className="text-link" href="/work">View all five projects <ArrowRight size={17} aria-hidden="true" /></Link>
+            <Link className="text-link" href="/work">View all {projects.length} projects <ArrowRight size={17} aria-hidden="true" /></Link>
           </div>
         </div>
       </section>

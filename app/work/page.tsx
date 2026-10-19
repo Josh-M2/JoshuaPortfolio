@@ -17,7 +17,7 @@ export default async function WorkPage() {
     <SiteShell>
       <div className="container page-intro">
         <h1>Projects, explained.</h1>
-        <p>These case studies focus on what I contributed. Screenshots show verified public demos, including a mobile view of Feel; the remaining diagram is conceptual. Repository details come from GitHub when available.</p>
+        <p>These case studies focus on what I contributed. Reviewed previews include Feel on mobile, LeadNest&apos;s signed-in joshw dashboard, and JuganDR&apos;s staff dashboard with fictional requests. Repository details come from GitHub when available.</p>
       </div>
       <section className="container" aria-label="Selected projects">
         <div className="project-list">

@@ -7,7 +7,7 @@ import { projects } from "@/config/projects";
 
 export const metadata: Metadata = {
   title: "Resume",
-  description: "The public resume of Joshua L. Magdadaro, drawn from reviewed CV content.",
+  description: "The public resume of Joshua L. Magdadaro, drawn from reviewed CV and project content.",
 };
 
 export default function ResumePage() {

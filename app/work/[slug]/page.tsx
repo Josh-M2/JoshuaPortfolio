@@ -76,10 +76,10 @@ export default async function ProjectPage({ params }: Props) {
                   </a>
                 </>
               ) : repository.status === "missing" ? (
-                <p>The source repository is currently unavailable on GitHub. This case study uses the reviewed CV content above.</p>
+                <p>The source repository is currently unavailable on GitHub. This case study uses the reviewed project content above.</p>
               ) : (
                 <>
-                  <p>Live GitHub details could not be loaded. This case study uses the reviewed CV content above.</p>
+                  <p>Live GitHub details could not be loaded. This case study uses the reviewed project content above.</p>
                   <a className="text-link" href={`https://github.com/${project.repo}`} target="_blank" rel="noopener noreferrer">
                     <Github size={17} aria-hidden="true" /> Try opening the repository <ArrowUpRight size={16} aria-hidden="true" />
                   </a>
