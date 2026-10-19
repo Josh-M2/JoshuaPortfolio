@@ -6,10 +6,9 @@ import { usePathname } from "next/navigation";
 import { profile } from "@/config/content";
 
 const links = [
-  { href: "/work", label: "Projects" },
+  { href: "/#work", label: "Projects" },
   { href: "/#experience", label: "Experience" },
   { href: "/#skills", label: "Skills" },
-  { href: "/resume", label: "Resume" },
 ];
 
 export function SiteHeader() {

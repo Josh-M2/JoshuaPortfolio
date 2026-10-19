@@ -69,6 +69,9 @@ export default async function HomePage() {
             <strong>{education.degree}</strong>
             <span>{education.school} · {education.period}</span>
           </div>
+          <div className="section-end-link">
+            <Link className="text-link" href="/resume">View full resume <ArrowRight size={17} aria-hidden="true" /></Link>
+          </div>
         </div>
       </section>
 
@@ -85,9 +88,6 @@ export default async function HomePage() {
                 <ul>{group.items.map((skill) => <li key={skill}>{skill}</li>)}</ul>
               </div>
             ))}
-          </div>
-          <div className="section-end-link">
-            <Link className="text-link" href="/resume">Read the full resume <ArrowRight size={17} aria-hidden="true" /></Link>
           </div>
         </div>
       </section>
