@@ -18,6 +18,15 @@
         ],
         "createdAt": "2026-10-17T05:02:35.884Z",
         "reason": "Agent: labeled engineering diagrams intentionally use contained stage nodes; these are process steps, not cards"
+      },
+      {
+        "rule": "side-tab",
+        "value": "*",
+        "files": [
+          "app/globals.css"
+        ],
+        "createdAt": "2026-10-19T01:04:02.255Z",
+        "reason": "Agent: the only flagged border is a CSS triangle drawing the diagram arrowhead, not a card accent"
       }
     ]
   }
